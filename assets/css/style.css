@@ -4,7 +4,8 @@
   font-family: cursive;
 }
 :root {
-  --main-color: blue;
+  --primary-color: #0047bb;
+  --points-color: #3c63a4;
 }
 body{
   background-color: #ecf1f2;
@@ -21,8 +22,9 @@ body{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(255, 187, 187); 
+  background: var(--primary-color); 
   border-radius: 10px;
+  height: 10px;
 }
 
 /* Handle on hover */
@@ -45,7 +47,8 @@ body{
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: rgb(17, 50, 133);
+  /* color: rgb(17, 50, 133); */
+  color: var(--primary-color);
   /* padding: 10px; */
 }
 
@@ -57,7 +60,8 @@ body{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(29, 66, 158);
+  /* background-color: rgb(29, 66, 158); */
+  background-color: var(--primary-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -71,13 +75,16 @@ body{
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-  color: rgb(29, 16, 108);
+  /* color: rgb(29, 16, 108); */
+  /* color: var(--primary-color); */
+  color: black;
   transition: color 0.3s;
   font-size: 1.5rem;
 }
 
 .navigation ul li a:hover {
-  color: rgb(24, 56, 139);
+  /* color: rgb(24, 56, 139); */
+  color: var(--primary-color);
 }
 
 .navigation ul {
@@ -104,7 +111,9 @@ body{
   }
   .about ul li{
     padding: 12px;
-
+  }
+  h3{
+    color: var(--points-color);
   }
   .socialmedia{
     width: 140px;
@@ -124,7 +133,7 @@ body{
   /* text-align: center; */
   height: 500px;
   padding: 125px 100px 0px 100px;
-  background-color: rgb(159, 255, 198);
+  /* background-color: rgb(159, 255, 198); */
 }
 .intro-container {
   /* top: 40%; */
@@ -132,14 +141,17 @@ body{
   /* position: absolute; */
 }
 .auto-type {
-  color: orange;
+  color: var(--primary-color);
 }
 .socialmedia {
   /* position: absolute; */
   padding-top: 45px;
-  width: 157px;
+  width: 350px;
   text-align: left;
   justify-content: center;
+}
+.socialmedia p{
+  padding-bottom: 140px;
 }
 .socialmedia a {
   text-decoration: none;
@@ -165,12 +177,13 @@ body{
 #logoName {
   display: none; 
 }
-.img-container {
+.img-container{
   top: 14%;
   left: 65%;
   position: absolute;
   /* background: black; */
   border-bottom: 7px solid black;
+  border-radius: 10px;
 }
 .img-container p {
   color: white;
@@ -196,13 +209,14 @@ body{
 .about{
   padding-top: 25px;
   padding-bottom: 60px;
-  background-color: rgb(255, 239, 174);
+  /* background-color: rgb(255, 239, 174); */
 }
 .about h1 {
   padding: 45px;
   margin: 15px;
   padding-left: 25px;
   font-size: 2.8rem;
+  color: var(--primary-color);
 }
 
 .about p{
@@ -213,6 +227,7 @@ body{
 .about h3{
   padding-left: 25px; 
   font-size: 2rem;
+  color: var(--points-color);
 }
 
 .about ul{
@@ -251,23 +266,31 @@ body{
 /* Qualification */
 
 .education{
-  background-color: rgb(240, 203, 255);
+  /* background-color: rgb(240, 203, 255); */
   padding-bottom: 100px;
   padding-top: 12px;
 }
+
 
 .educationh1{
     padding: 45px 45px 45px 45px;
     margin: 0px;
     font-size: 2.8rem;
+    color: var(--primary-color);
   }
   
   
 .education .container{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 200px;
+    /* display: flex;
+    display: grid;
+    grid-row: 2;
+    grid-column: 2; */
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    grid-template-columns: repeat(2,1fr);
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* gap: 200px; */
 }
 .education .container .cards{
     width: 220px;
@@ -298,8 +321,11 @@ h4{
 
 .qualification-about{
   border: 1px solid black;
-  padding: 50px;
-  margin: 50px;
+  padding: 20px;
+  margin: 20px;
+}
+.qualification-about h1{
+  color: var(--points-color);
 }
 
 
@@ -317,13 +343,54 @@ h4{
 /* Projects */
 
 .projects{
-  background-color: rgb(159, 210, 255);
+  /* background-color: rgb(159, 210, 255); */
   padding-bottom: 60px;
 }
-.projects h1{
-  padding: 45px 45px 45px 45px;
+.peojectsh1{
+    padding: 45px 45px 45px 45px;
     margin: 0px;
     font-size: 2.8rem;
+    color: var(--primary-color);
+}
+.projects .container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 60px 0px 0px 0px;
+}
+.projects .container .cards{
+  padding: 40px 0px 50px 0px;
+  width: 220px;
+  height: 260px;
+  border-bottom: 12px solid black;
+  border-radius: 10px;
+}
+.projects .container .cards:hover{
+  background: linear-gradient(rgb(114, 243, 255),rgb(132, 241, 255),rgb(157, 255, 234));
+  transform: translateY(-4%);
+  transition: all 0.3s;
+}
+
+.projects .container .cards a{
+  text-decoration: none;
+  color: rgb(8, 0, 82);
+}
+.projects .container .cards img{
+  height: 150px;
+}
+.myprojectportfolioimage{
+  border-radius: 136px 73px 137px 84px;
+-webkit-border-radius: 136px 73px 137px 84px;
+-moz-border-radius: 136px 73px 137px 84px;
+border: 1px solid #ff6550;
+transition: all 2s;
+}
+.myprojectportfolioimage:hover{
+  border-radius: 72px 138px 84px 137px;
+  -webkit-border-radius: 72px 138px 84px 137px;
+  -moz-border-radius: 72px 138px 84px 137px;
+  border: 1px solid #ff6550;
 }
 .projects table{
   /* padding: 0px 50px 50px 50px; */
@@ -336,3 +403,113 @@ h4{
 }
 
 /* End Projects */
+
+/* Achievments */
+
+.achivements{
+  padding-bottom: 100px;
+}
+
+.achivements .container{
+  display: flex;
+  padding: 20px;
+}
+.acheivementsh1{
+  padding: 45px 45px 45px 45px;
+  margin: 0px;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+.achivementsdetails1{
+  
+}
+.achivementsdetails h2{
+  display: inline;
+  color: var(--points-color);
+}
+.achivementsdetails span{
+  padding-left: 50%;
+}
+
+/* End Achievments */
+
+/* Contact */
+
+.contact{
+  /* padding: 100px; */
+}
+.contacth1{
+  padding: 45px 45px 45px 45px;
+    margin: 0px;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+.contact .container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contact .container .contact-detailes{
+  width: 50%;
+  /* text-align: left; */
+  display: inline-block;
+  vertical-align: middle;
+  margin: 45px;
+}
+.contact .container .contact-detailes p{
+  height: 2rem;
+  text-align: left;
+  padding: 30px 30px 30px 80px;
+  /* justify-content: center; */
+}
+.contact .container .contact-detailes p img{
+  height: 2rem;
+  vertical-align: middle;
+}
+.contact .container .contact-detailes p a{
+  text-decoration: none;
+  color: var(--points-color);
+}
+.contact .container .form-container{
+padding: 0px 100px 100px 0px;
+width: 50%;
+}
+.contact .container .form-container form{
+  /* width: 70%; */
+  /* border: none; */
+  background-color: ecf1f2;
+  text-align: center;
+}
+.contact .container .form-container form fieldset{
+  /* width: 70%; */
+  border: none;
+  background-color: transparent;
+}
+.contact .container .form-container input,textarea{
+  width: 32rem;
+  padding: 5px 25px 5px 25px ;
+  margin: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  resize: vertical;
+}
+.contact .container .form-container textarea{
+  height: 150px;
+}
+.contact .container .form-container button{
+  border-radius: 12px;
+  width: 23rem;
+  padding: 5px 25px 5px 25px ;
+  margin: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+.contact .container .form-container button:hover{
+  background-color: #025ff4;
+  cursor: pointer;
+}
+
+/* End Contact */
