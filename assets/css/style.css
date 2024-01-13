@@ -23,8 +23,8 @@ body{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color); 
-  border-radius: 10px;
-  height: 10px;
+  /* border-radius: 25px; */
+  height: 3px;
 }
 
 /* Handle on hover */
@@ -237,11 +237,11 @@ body{
   justify-content: center;
 }
 .about li{
-  padding-left: 70px;
+  padding-left: 60px;
 }
 
 .about img{
-  height: 60px;
+  height: 80px;
 }
 
 .about .spara{
@@ -321,6 +321,7 @@ h4{
 
 .qualification-about{
   border: 1px solid black;
+  border-radius: 12px;
   padding: 20px;
   margin: 20px;
 }
@@ -513,3 +514,19 @@ width: 50%;
 }
 
 /* End Contact */
+
+/* footer */
+
+footer{
+  /* display: flex; */
+  background-color: var(--primary-color);
+  height: 80px;
+  color: white;
+}
+.footer{
+  display: flex;
+align-items: center;
+justify-content: center;
+height: 80px;
+}
+/* end footer */
