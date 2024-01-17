@@ -533,6 +533,9 @@ width: 50%;
   background-color: #025ff4;
   cursor: pointer;
 }
+#loading{
+  display: none;
+}
 
 @media only screen and (max-width: 450px) {
   .contact .container{
@@ -543,9 +546,9 @@ width: 50%;
     
   }
   .contact .container .contact-detailes p{
-    height: 0px;
-    padding: 0px;
-    font-size: 1rem;
+    height: auto;
+    width: max-content;
+    padding: 5px;
   }
   .contact .container .form-container{
     padding: 0px 0px 100px 0px;
@@ -560,7 +563,7 @@ width: 50%;
   .contact .container .form-container button{
     width: 18rem;
   }
-
+}
 /* End Contact */
 
 /* footer */
@@ -573,8 +576,9 @@ footer{
 }
 .footer{
   display: flex;
-align-items: center;
-justify-content: center;
-height: 80px;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
 }
-/* end footer */
+
+/* End footer */

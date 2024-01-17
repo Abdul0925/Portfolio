@@ -363,15 +363,15 @@
         <h1 class="contacth1" data-aos="zoom-in-down">Contact Me</h1>
         <div class="container">
             <div class="contact-detailes" data-aos="fade-up">
-                <p><a href="mailto:abdulrahim74264@gmail.com" > <img src="assets/img/telephone-call.png" alt=""> : abdulrahim74264@gmail.com</a></p>
-                <p><a href="tel:+918275435110" ><img src="assets/img/mail.png" alt=""> : +91 8275435110</a></p>
+                <p><a href="mailto:abdulrahim74264@gmail.com" > <img src="assets/img/mail.png" alt=""> : abdulrahim74264@gmail.com</a></p>
+                <p><a href="tel:+918275435110" ><img src="assets/img/telephone-call.png" alt=""> : +91 8275435110</a></p>
             </div>
             <div class="form-container" data-aos="fade-up">
                 <form id="contact" action="" method="post" name="contact-form">
                     <!-- <h1>Contact Form</h1> -->
                     
                     <fieldset>
-                        <input placeholder="Your name" name="Name" type="text" tabindex="1" >
+                        <input placeholder="Your name" name="Name" type="text" tabindex="1" required>
                     </fieldset>
                     <fieldset>
                         <input placeholder="Your Email Address" name="Email" type="email" tabindex="2">
@@ -381,9 +381,10 @@
                 </fieldset>
                 
                 <fieldset>
-                    <button type="submit" name="send" id="contact-submit">Submit Now</button>
+                    <button type="submit" name="send" id="contact-submit" onclick="loading()">Submit Now</button>
                 </fieldset>
             </form>
+            <p id="loading">🔃 Loading...</p>
         </div>
         </div>
     </div>
@@ -398,6 +399,15 @@
             .then(()=>{window.location.reload();})
             .catch(error=>console.error('Error!',error.message))
         })
+
+        const message = document.getElementById("loading")
+        function loading() {
+            message.style.display = "block"
+        
+        setTimeout(function() {
+        message.style.display = 'none';
+      }, 5000);
+    }
     </script>
     <!-- End Contact -->
 
