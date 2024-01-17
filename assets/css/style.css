@@ -178,7 +178,7 @@ body{
   display: none; 
 }
 .img-container{
-  top: 14%;
+  top: 20%;
   left: 65%;
   position: absolute;
   /* background: black; */
@@ -196,6 +196,10 @@ body{
 @media only screen and (max-width:450px) { 
   .home{
   display: block;
+  padding: 90px 10px;
+  }
+  .home .socialmedia p{
+    padding-bottom: 25px;
   }
   .img-container{
     position: relative;
@@ -333,8 +337,7 @@ h4{
 @media only screen and (max-width: 450px) {
   .education .container{
     padding: 10px;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: contents;
   }
   
 }
@@ -403,6 +406,14 @@ transition: all 2s;
   border-collapse: collapse;
 }
 
+@media only screen and (max-width: 450px) {
+  .projects .container{
+    padding: 69px;
+    display: block;
+  }
+  
+}
+
 /* End Projects */
 
 /* Achievments */
@@ -430,6 +441,16 @@ transition: all 2s;
 }
 .achivementsdetails span{
   padding-left: 50%;
+}
+@media only screen and (max-width: 450px) {
+  .achivements .container{
+    display: block;
+  }
+  .achivements .container img{
+    height: 35vh;
+    padding: 3%;
+  }
+  
 }
 
 /* End Achievments */
@@ -512,6 +533,33 @@ width: 50%;
   background-color: #025ff4;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+  .contact .container{
+    display: block;
+  }
+  .contact .container .contact-detailes{
+    display: block;
+    
+  }
+  .contact .container .contact-detailes p{
+    height: 0px;
+    padding: 0px;
+    font-size: 1rem;
+  }
+  .contact .container .form-container{
+    padding: 0px 0px 100px 0px;
+    width: 100%;
+  }
+  .contact .form-container form{
+    width: 50vh;
+  }
+  .contact .container .form-container input,textarea{
+    width: 18rem;
+  }  
+  .contact .container .form-container button{
+    width: 18rem;
+  }
 
 /* End Contact */
 

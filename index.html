@@ -367,17 +367,17 @@
                 <p><a href="tel:+918275435110" ><img src="assets/img/mail.png" alt=""> : +91 8275435110</a></p>
             </div>
             <div class="form-container" data-aos="fade-up">
-                <form id="contact" action="assets/index.php" method="post">
+                <form id="contact" action="" method="post" name="contact-form">
                     <!-- <h1>Contact Form</h1> -->
                     
                     <fieldset>
-                        <input placeholder="Your name" name="name" type="text" tabindex="1" >
+                        <input placeholder="Your name" name="Name" type="text" tabindex="1" >
                     </fieldset>
                     <fieldset>
-                        <input placeholder="Your Email Address" name="email" type="email" tabindex="2">
+                        <input placeholder="Your Email Address" name="Email" type="email" tabindex="2">
                     </fieldset>
                     <fieldset>
-                        <textarea name="message" placeholder="Type your Message Details Here..." tabindex="5""></textarea>
+                        <textarea name="Message" placeholder="Type your Message Details Here..." tabindex="5""></textarea>
                 </fieldset>
                 
                 <fieldset>
@@ -387,6 +387,18 @@
         </div>
         </div>
     </div>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzTQeU_PyR9BXdVAPDzKsgEsMy16tiYxqrArDoEwNMrz457PzbJVcfZQL37uFbUUE86yg/exec"
+        const form = document.forms['contact-form']
+
+        form.addEventListener('submit',e=>{
+            e.preventDefault()
+            fetch(scriptURL,{method:'POST',body:new FormData(form)})
+            .then(response=>alert("Thank you! Your message is sent successfully"))
+            .then(()=>{window.location.reload();})
+            .catch(error=>console.error('Error!',error.message))
+        })
+    </script>
     <!-- End Contact -->
 
 
